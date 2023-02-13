@@ -1,0 +1,31 @@
+﻿<Window x:Class="HospitalApp.View.Windows.WinSaveTickets"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApp.View.Windows"
+        mc:Ignorable="d"
+        Title="Записанные к врачу" Height="450" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Поиск врача:"/>
+            <TextBox x:Name="tbxSearch" TextChanged="tbxSearch_TextChanged"
+                     VerticalContentAlignment="Center"/>
+            <RadioButton x:Name="rbtnAsc" Content="По возрастанию" 
+                         Click="rbtnAsc_Click" IsChecked="True" 
+                         VerticalAlignment="Center"/>
+            <RadioButton x:Name="rbtnDesc" Content="По убыванию"
+                         Click="rbtnDesc_Click" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <ListView
+            x:Name="lvTickets" Grid.Row="1">
+        </ListView>
+        
+    </Grid>
+</Window>

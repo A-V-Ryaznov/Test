@@ -1,0 +1,32 @@
+﻿<Window x:Class="HospitalApp.View.Windows.WinFreeTime"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApp.View.Windows"
+        mc:Ignorable="d"
+        Title="WinFreeTime" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel x:Name="StackPanel"
+                    Orientation="Vertical" Grid.RowSpan="2">
+            <Label Content="ГРАФИК СВОБОДНОГО ВРЕМЕНИ"/>
+            <TextBlock x:Name="tbSpecialization"/>
+            <TextBlock x:Name="tbDoctor"/>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Время:"/>
+                <StackPanel Orientation="Horizontal"
+                             Name="spTime">
+                    <TextBlock x:Name="tbTime"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <Button x:Name="btnPrint" Grid.Row="1"
+                Content="Печать" Click="btnPrint_Click"></Button>
+    </Grid>
+</Window>
